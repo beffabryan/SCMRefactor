@@ -11,4 +11,6 @@ body {
     background-color:  rgb(15,17,26) !important;
 }
 
-
+#search {
+    padding: 20px;
+}

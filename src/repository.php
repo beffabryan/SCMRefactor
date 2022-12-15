@@ -33,7 +33,9 @@
 
 <!-- Title  -->
 <div class="container mx-auto text">
-    <h3 class="text-white mt-4 mb-3 border-bottom pb-3 ">BryanBeffa/TheCrane</h3>
+    <h4 class="text-white mt-4 mb-3 border-bottom pb-3 ">
+        <a href="#">@BryanBeffa </a>/<a href="#"> TheCrane</a>
+    </h4>
 
     <div class="row text-secondary text-center">
         <div class="col-xl col-lg col-md-6 col-6 text-center">
@@ -126,7 +128,7 @@
                 <div class="card bg-main">
                     <table class="table table-borderless table-responsive text-secondary">
                         <thead class="text-white fw-bolder">
-                        <tr class="border-bottom border-secondary">
+                        <tr class="border-bottom border-primary">
                             <th>Filename</th>
                             <th>Last change</th>
                             <th>Last change</th>
@@ -180,8 +182,8 @@
             >
                 <div class="card bg-main">
                     <table class="table table-borderless table-responsive text-secondary">
-                        <thead class="text-white fw-bolder">
-                        <tr>
+                        <thead class="text-white fw-bolder ">
+                        <tr class="">
                             <th></th>
                             <th>Commit ID</th>
                             <th class="col-5">Description</th>
@@ -303,11 +305,34 @@
                     aria-labelledby="ex3-tab-3"
             >
                 <div class="card bg-main">
-                    <p class="text-secondary"><b class="text-white">Repository name: </b>TheCrane</p>
-                    <p class="text-secondary"><b class="text-white">Description: </b>Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Pellentesque malesuada, metus in porttitor</p>
-                    <p class="text-secondary"><b class="text-white">Manager: </b>Bryan Beffa, Simone Finiletti</p>
-                    <p class="text-secondary"><b class="text-white">Developer: </b>Bryan Beffa, Simone Finiletti</p>
+
+                    <div class="card-header pb-0 border-bottom border-primary">
+                        <h4 class="text-white"><b class="text-white">Repository name</b></h4>
+                        <p class="text-secondary">TheCraneEngine</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <h4 class="text-white"><b class="text-white">Description</b></h4>
+                                <p class="text-secondary">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Pellentesque malesuada, metus in porttitor
+                                </p>
+                                <h4 class="text-white mt-4"><b class="text-white">Manager</b></h4>
+                                <p class="text-secondary">Bryan Beffa, Simone Finiletti</p>
+                                <h4 class="text-white mt-4"><b class="text-white">Developer</b></h4>
+                                <p class="text-secondary">Bryan Beffa, Simone Finiletti</p>
+                            </div>
+                            <div class="col-5">
+                                <div class="col-8 mx-auto">
+                                    <canvas id="chart4" style="margin:"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-end text-secondary border-top border-primary">
+                        created 10.11.2022
+                    </div>
                 </div>
             </div>
             <div
@@ -329,7 +354,7 @@
                                 <canvas id="chart2"></canvas>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-12 mx-auto my-3">
-                                <h4 class="mb-3">Percentage of changed code lines</h4>
+                                <h4 class="mb-3">Changed lineslines</h4>
                                 <canvas id="chart3"></canvas>
                             </div>
                         </div>
@@ -340,6 +365,7 @@
                     const chart1 = document.getElementById('chart1');
                     const chart2 = document.getElementById('chart2');
                     const chart3 = document.getElementById('chart3');
+                    const chart4 = document.getElementById('chart4');
 
                     new Chart(chart1, {
                         type: 'bar',
@@ -384,6 +410,34 @@
                         }
                     });
 
+                    const data = {
+                        labels: [
+                            'CSS',
+                            'Javascript',
+                            'HTML',
+                            'Php',
+                            'SCSS'
+                        ],
+                        datasets: [{
+                            label: 'Lines of code',
+                            data: [300, 50, 100, 200],
+                            backgroundColor: [
+                                'rgb(0,40,124)',
+                                'rgb(54, 162, 235)',
+                                'rgb(86,138,183)',
+                                'rgb(134,177,210)',
+                                'rgb(3,18,52)'
+                            ],
+                            hoverOffset: 4
+                        }]
+                    };
+
+                    new Chart(chart4, {
+                        type: 'pie',
+                        data: data,
+                        options: {}
+                    });
+
                 </script>
 
             </div>
@@ -395,11 +449,10 @@
 <script type="text/javascript" src="js/spacing.js"></script>
 <script type="text/javascript" src="js/notify.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-
 <script>
 
     $.notify.addStyle("success1", {
-        html: "<div style='width: 200px'><i class='fa fa-check-circle pe-2' style='color: green'></i><span data-notify-text></span></div>",
+        html: "<div style='width: 200px'><i class='fa fa-check-circle pe-2 text-primary'></i><span data-notify-text></span></div>",
         classes: {
             base: {
                 'background-color': 'rgb(0,0,0)'
@@ -422,7 +475,6 @@
             "git clone command copied", successOptions
         )
     });
-
 
 </script>
 <?php require_once 'global/footer.php' ?>

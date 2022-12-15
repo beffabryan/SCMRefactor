@@ -50,14 +50,16 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" class="btn btn-primary">Learn more</button>
+                        <a href="http://localhost:8080/SCMRefactor/src/repository.php">
+                            <button type="button" class="btn btn-primary">Learn more</button>
+                        </a>
                     </div>
                     <div class="col-6 text-end">
                         <p>Clone
-                            <a href="#" data-mdb-toggle="tooltip"
+                            <a data-mdb-toggle="tooltip"
                                class="repo"
                                title="git clone https://scm.ti-edu.ch/repogit/labingsw022022202308ed2d"><i
-                                        class="text-primary fa-regular fa-clone fa-2x ps-3"></i></a>
+                                        class="text-primary fa-regular fa-clone fa-2x ps-3 gitClone" style="cursor: pointer"></i></a>
                         </p>
                     </div>
 
@@ -99,14 +101,16 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" class="btn btn-primary">Learn more</button>
+                        <a href="http://localhost:8080/SCMRefactor/src/repository.php">
+                            <button type="button" class="btn btn-primary">Learn more</button>
+                        </a>
                     </div>
                     <div class="col-6 text-end">
                         <p>Clone
-                            <a href="#" data-mdb-toggle="tooltip"
+                            <a data-mdb-toggle="tooltip"
                                class="repo"
                                title="git clone https://scm.ti-edu.ch/repogit/labingsw022022202308ed2d"><i
-                                        class="text-primary fa-regular fa-clone fa-2x ps-3"></i></a>
+                                        class="text-primary fa-regular fa-clone fa-2x ps-3 gitClone" style="cursor: pointer"></i></a>
                         </p>
                     </div>
 
@@ -148,17 +152,18 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" class="btn btn-primary">Learn more</button>
+                        <a href="http://localhost:8080/SCMRefactor/src/repository.php">
+                            <button type="button" class="btn btn-primary">Learn more</button>
+                        </a>
                     </div>
                     <div class="col-6 text-end">
                         <p>Clone
-                            <a href="#" data-mdb-toggle="tooltip"
+                            <a data-mdb-toggle="tooltip"
                                class="repo"
                                title="git clone https://scm.ti-edu.ch/repogit/labingsw022022202308ed2d"><i
-                                        class="text-primary fa-regular fa-clone fa-2x ps-3"></i></a>
+                                        class="text-primary fa-regular fa-clone fa-2x ps-3 gitClone" style="cursor: pointer"></i></a>
                         </p>
                     </div>
-
                 </div>
             </div>
 
@@ -201,17 +206,18 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" class="btn btn-primary">Learn more</button>
+                        <a href="http://localhost:8080/SCMRefactor/src/repository.php">
+                            <button type="button" class="btn btn-primary">Learn more</button>
+                        </a>
                     </div>
                     <div class="col-6 text-end">
                         <p>Clone
-                            <a href="#" data-mdb-toggle="tooltip"
+                            <a data-mdb-toggle="tooltip"
                                class="repo"
                                title="git clone https://scm.ti-edu.ch/repogit/labingsw022022202308ed2d"><i
-                                        class="text-primary fa-regular fa-clone fa-2x ps-3"></i></a>
+                                        class="text-primary fa-regular fa-clone fa-2x ps-3 gitClone" style="cursor: pointer"></i></a>
                         </p>
                     </div>
-
                 </div>
             </div>
 
@@ -229,6 +235,36 @@
 <script type="text/javascript" src="js/spacing.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/notify.min.js"></script>
+
+<script>
+
+    $.notify.addStyle("success1", {
+        html: "<div style='width: 200px'><i class='fa fa-check-circle pe-2 text-primary'></i><span data-notify-text class='text-white'></span></div>",
+        classes: {
+            base: {
+                'background-color': 'rgb(0,0,0)'
+            }
+        }
+    });
+
+    var successOptions = {
+        style: "success1",
+        autoHideDelay: 400,
+        showAnimation: "fadeIn",
+        hideAnimation: "fadeOut",
+        hideDuration: 1500,
+        arrowShow: false,
+        position: "left"
+    };
+
+    $(".gitClone").click(function () {
+        $(this).notify(
+            "git clone command copied", successOptions
+        )
+    });
+
+
+</script>
 <?php require_once 'global/footer.php' ?>
 
 </body>

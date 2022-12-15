@@ -1,58 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>USI &amp; SUPSI Source Code Management (SCM)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="Redmine"/>
-    <meta name="keywords" content="issue,bug,tracker"/>
-    <meta name="csrf-param" content="authenticity_token"/>
-    <meta name="csrf-token"
-          content="PJwPpGk33Ux6UBs8jK+kKL5tndFQZXJMThc3KcawA+BnoilovM/Wais+4viHQ9+VDL/nJ272ztmzM0qkhmTg/A=="/>
-    <link rel='shortcut icon' href='https://scm.ti-edu.ch/favicon.ico?1560171137'/>
+ <?php require_once 'global/head.php'?>
+<body>
 
-
-    <!-- Bootstrap link -->
-    <!-- Font Awesome -->
-    <link
-            href="css/style.css"
-            rel="stylesheet"
-    />
-    <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-            rel="stylesheet"
-    />
-    <link
-            href="cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"
-            rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
-            rel="stylesheet"
-    />
-
-    <!-- MDB -->
-    <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
-    ></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script
-            type="text/javascript"
-            src="cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"
-    ></script>
-</head>
-<body style="background-color:  rgb(15,17,26)">
-
-<?php require_once 'navbar.php' ?>
+<?php $_SESSION['nav_bar_item'] = "homepage"; ?>
+<?php require_once 'global/navbar.php' ?>
+<?php require_once 'global/header.php' ?>
 
 <div class=" text-center mx-auto text my-4">
     <div class="">
@@ -70,102 +23,68 @@
 <!-- Project -->
 <div class="container my-5">
 
-    <table class="table table-responsive" id="projectTable">
-        <thead class="text-white">
-        <tr>
-            <th>Repository</th>
-            <th>Description</th>
-            <th>Manager</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="text-secondary">
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        <tr class="text-secondary">
+    <!-- serch input -->
+    <div class="col-lg-6 col-xl-6 col-md-8 col-12 mx-auto my-5 pt-5">
+        <div class="input-group">
+            <input type="search" class="form-control rounded-pill" style="background-color:rgba(0,0,0,0) " placeholder="Project name" aria-label="Search"
+                   aria-describedby="search-addon"/>
+            <span class="input-group-text border-0" id="search-addon">
+                <a href="">
+                    <i class="fas fa-search"></i>
+                </a>
+            </span>
+        </div>
+    </div>
 
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        </tr>        <tr class="text-secondary">
+    <div class="col-10 mx-auto">
 
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        </tr>
-        <tr class="text-secondary">
+        <table class="table table-responsive" id="projectTable">
+            <thead class="text-white">
+            <tr>
+                <th>Repository</th>
+                <th>Description</th>
+                <th>Manager</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-secondary">
+                <td>TheCrane</td>
+                <td>Graphic engine development</td>
+                <td>Beffa Bryan, Finiletti Simone, ...</td>
+                <td><i class="fa-solid fa-arrow-right "></i></td>
+            <tr class="text-secondary">
 
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        <tr class="text-secondary">
+                <td>TheCrane</td>
+                <td>Graphic engine development</td>
+                <td>Beffa Bryan, Finiletti Simone, ...</td>
+                <td><i class="fa-solid fa-arrow-right "></i></td>
+            </tr>
+            <tr class="text-secondary">
 
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        </tr>        <tr class="text-secondary">
+                <td>TheCrane</td>
+                <td>Graphic engine development</td>
+                <td>Beffa Bryan, Finiletti Simone, ...</td>
+                <td><i class="fa-solid fa-arrow-right "></i></td>
+            </tr>
+            </tbody>
+        </table>
+        <nav class="justify-content-end" aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link text-white" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link text-white" href="#">1</a></li>
+                <li class="page-item"><a class="page-link text-white" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-white" href="#">3</a></li>
+                <li class="page-item"><a class="page-link text-white" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
 
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        </tr>        <tr class="text-secondary">
-
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        <tr class="text-secondary">
-
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        </tr>        <tr class="text-secondary">
-
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        </tr>
-        <tr class="text-secondary">
-
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        <tr class="text-secondary">
-
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        </tr>        <tr class="text-secondary">
-
-            <td>TheCrane</td>
-            <td>Graphic engine development</td>
-            <td>Beffa Bryan, Finiletti Simone, ...</td>
-            <td><i class="fa-solid fa-arrow-right "></i></td>
-        </tr>
-
-        </tbody>
-    </table>
 </div>
 
-<script>
-    $(document).ready( function () {
-        $('#projectTable').DataTable();
-    });
-</script>
-
-<?php require_once 'footer.php' ?>
+<script type="text/javascript" src="js/spacing.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<?php require_once 'global/footer.php' ?>
 
 </body>
 </html>

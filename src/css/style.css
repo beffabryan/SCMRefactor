@@ -3,6 +3,10 @@
 }
 
 .bg-main {
-    background-color: #000;
+    background-color: #0b0c12 !important;
     color: white;
+}
+
+body {
+    background-color:  rgb(15,17,26) !important;
 }

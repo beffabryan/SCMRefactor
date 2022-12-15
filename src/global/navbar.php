@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-main">
+<nav class="fixed-top navbar navbar-expand-lg navbar-light"  style="background-color:rgba(11,12,18, 0.95)" id="navbar">
     <!-- Container wrapper -->
     <div class="container-fluid">
         <!-- Toggle button -->
@@ -28,14 +28,11 @@
             </a>
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Home</a>
+                <li class="nav-item m-0">
+                    <a class="nav-link text-white <?php echo ($_SESSION['nav_bar_item'] == 'homepage') ? 'border-2 border-bottom border-white' : "" ?> " href="homepage.php" >Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Help</a>
+                    <a class="nav-link text-white <?php echo ($_SESSION['nav_bar_item'] == 'projects') ? 'border-2 border-bottom border-white' : "" ?>" href="projects.php">Projects</a>
                 </li>
             </ul>
             <!-- Left links -->
@@ -54,20 +51,48 @@
                         data-mdb-toggle="dropdown"
                         aria-expanded="false"
                 >
-                    <i class="fas ">En</i>
+                    <i class="text-white" id="language">EN</i>
                 </a>
                 <ul
                         class="dropdown-menu dropdown-menu-end"
                         aria-labelledby="navbarDropdownMenuAvatar"
                 >
                     <li>
-                        <a class="dropdown-item" href="#">Italiano</a>
+                        <a class="dropdown-item language" href="#" title="IT">Italiano</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item language" href="#" title="EN">English</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Deutsch</a>
+                        <a class="dropdown-item language" href="#" title="DE">Deutsch</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Action button -->
+            <div class="dropdown">
+                <a
+                        class="text-reset me-3 dropdown-toggle hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    <i class="fas fa-plus text-white"></i>
+                </a>
+                <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                    <li>
+                        <a class="dropdown-item" href="#">New repository</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Import repository</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">New Project</a>
                     </li>
                 </ul>
             </div>
@@ -82,7 +107,7 @@
                         data-mdb-toggle="dropdown"
                         aria-expanded="false"
                 >
-                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-bell text-white"></i>
                     <span class="badge rounded-pill badge-notification bg-danger">1</span>
                 </a>
                 <ul
@@ -94,7 +119,7 @@
                             <p class="text-end p-0 m-0">
                                 <sup>2m</sup>
                             </p>
-                            <p class="pe-5 h7">
+                            <p class="h7 p-0 pe-5 m-0">
                                 <i class="fa-solid fa-code-pull-request me-2"></i>
                                 Pull request #crane
                             </p>
@@ -106,7 +131,7 @@
                             <p class="text-end p-0 m-0">
                                 <sup>35m</sup>
                             </p>
-                            <p class="pe-5 h7">
+                            <p class="h7 p-0 pe-5 m-0">
                                 <i class="fa-solid fa-triangle-exclamation me-2"></i>Issue #editor
                             </p>
                         </a>
@@ -138,11 +163,20 @@
                         class="dropdown-menu dropdown-menu-end"
                         aria-labelledby="navbarDropdownMenuAvatar"
                 >
+                    <li class="border-2 border-bottom">
+                        <a class="dropdown-item">Logged as: <b class="fw-bolder">example@student.supsi.ch</b></a>
+                    </li>
                     <li>
                         <a class="dropdown-item" href="#">Account</a>
                     </li>
-                    <li>
+                    <li class="border-2 border-bottom">
                         <a class="dropdown-item" href="#">My page</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Help</a>
+                    </li>
+                    <li class="border-2 border-bottom">
+                        <a class="dropdown-item" href="#">Settings</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">Logout</a>

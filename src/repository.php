@@ -6,12 +6,22 @@
         color: #FFF;
         font-size: 1em;
     }
+
     .nav-tabs .nav-item .nav-link:hover {
         background-color: rgba(100, 100, 100, 0.1);
     }
 
     .nav-tabs .nav-item .nav-link.active {
         background-color: transparent;
+    }
+
+    #branch {
+        background-color: transparent;
+        color: white;
+        padding: 5px 10px;
+        margin-left: 10px;
+        border: 1px darkgray solid;
+        border-radius: 5px;
     }
 
 </style>
@@ -22,16 +32,35 @@
 <?php require_once 'global/header.php' ?>
 
 <!-- Title  -->
-<div class=" text-center mx-auto text">
-    <h1 class="text-white mt-5">Repo name</h1>
-    <p class="h4 text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque malesuada, metus
-        in porttitor</p>
+<div class="container mx-auto text">
+    <h3 class="text-white mt-4 mb-3 border-bottom pb-3 ">BryanBeffa/TheCrane</h3>
 
+    <div class="row text-secondary text-center">
+        <div class="col-xl col-lg col-md-6 col-6 text-center">
+            <label for="branch">Branch:</label>
+            <select name="ms-5" id="branch">
+                <option class="bg-main" value="master" style="background-color: #0b0c12" selected>master</option>
+                <option class="bg-main" value="main">main</option>
+                <option class="bg-main" value="dev">dev</option>
+            </select>
+        </div>
+        <div class="col-xl col-lg col-md-6 col-6 text-center"><a href="">Issues: </a>4</div>
+        <div class="col-xl col-lg col-md-6 col-6 text-center"><a href="">Fork: </a>2</div>
+        <div class="col-xl col-lg col-md-6 col-6 text-center">
+            <p>Clone
+                <a href="#" data-mdb-toggle="tooltip"
+                   class="repo"
+                   id="gitClone"
+                   title="git clone https://scm.ti-edu.ch/repogit/labingsw022022202308ed2d"><i
+                            class="text-primary fa-regular fa-clone ps-3"></i></a>
+            </p>
+        </div>
+    </div>
 </div>
 
 
 <!-- Main -->
-<main class="container mt-5">
+<main class="container mt-3">
     <!-- Tabs navs -->
     <div class="col-11 mx-auto my-4">
         <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
@@ -273,7 +302,13 @@
                     role="tabpanel"
                     aria-labelledby="ex3-tab-3"
             >
-                Tab 3 content
+                <div class="card bg-main">
+                    <p class="text-secondary"><b class="text-white">Repository name: </b>TheCrane</p>
+                    <p class="text-secondary"><b class="text-white">Description: </b>Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Pellentesque malesuada, metus in porttitor</p>
+                    <p class="text-secondary"><b class="text-white">Manager: </b>Bryan Beffa, Simone Finiletti</p>
+                    <p class="text-secondary"><b class="text-white">Developer: </b>Bryan Beffa, Simone Finiletti</p>
+                </div>
             </div>
             <div
                     class="tab-pane fade"
@@ -281,7 +316,76 @@
                     role="tabpanel"
                     aria-labelledby="ex3-tab-4"
             >
-                Tab 4 content
+                <div class="card bg-main">
+
+                    <div class="col-xl-8 col-lg-8 col-md-10 col-12 mx-auto my-3">
+                        <h4>Number of commits in the last months</h4>
+                        <canvas id="chart1"></canvas>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-10 col-12 mx-auto">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 mx-auto my-3">
+                                <h4 class="mb-3">Percentage of code lines</h4>
+                                <canvas id="chart2"></canvas>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 mx-auto my-3">
+                                <h4 class="mb-3">Percentage of changed code lines</h4>
+                                <canvas id="chart3"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    const chart1 = document.getElementById('chart1');
+                    const chart2 = document.getElementById('chart2');
+                    const chart3 = document.getElementById('chart3');
+
+                    new Chart(chart1, {
+                        type: 'bar',
+                        data: {
+                            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                            datasets: [{
+                                label: 'Number of commits',
+                                data: [120, 190, 30, 50, 20, 30, 10, 10, 20, 40, 20, 10],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                        }
+                    });
+
+                    new Chart(chart2, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Bryan Beffa', 'Simone Finiletti'],
+                            datasets: [{
+                                label: 'Code lines',
+                                data: [64, 36],
+                                borderWidth: 1
+                            }]
+                        }
+                    });
+
+                    new Chart(chart3, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Bryan Beffa', 'Simone Finiletti'],
+                            datasets: [{
+                                label: 'Code lines',
+                                data: [41, 59],
+                                borderWidth: 1
+                            }]
+                        }
+                    });
+
+                </script>
+
             </div>
         </div>
     </div>
@@ -289,7 +393,38 @@
 </main>
 
 <script type="text/javascript" src="js/spacing.js"></script>
+<script type="text/javascript" src="js/notify.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
+<script>
+
+    $.notify.addStyle("success1", {
+        html: "<div style='width: 200px'><i class='fa fa-check-circle pe-2' style='color: green'></i><span data-notify-text></span></div>",
+        classes: {
+            base: {
+                'background-color': 'rgb(0,0,0)'
+            }
+        }
+    });
+
+    var successOptions = {
+        style: "success1",
+        autoHideDelay: 400,
+        showAnimation: "fadeIn",
+        hideAnimation: "fadeOut",
+        hideDuration: 1500,
+        arrowShow: false,
+        position: "left"
+    };
+
+    $("#gitClone").click(function () {
+        $("#gitClone").notify(
+            "git clone command copied", successOptions
+        )
+    });
+
+
+</script>
 <?php require_once 'global/footer.php' ?>
 
 </body>

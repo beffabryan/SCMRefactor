@@ -228,6 +228,7 @@
 
 <script type="text/javascript" src="js/spacing.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/notify.min.js"></script>
 <?php require_once 'global/footer.php' ?>
 
 </body>

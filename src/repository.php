@@ -125,13 +125,13 @@
                     role="tabpanel"
                     aria-labelledby="ex3-tab-1"
             >
-                <div class="card bg-main">
-                    <table class="table table-borderless table-responsive text-secondary">
+                <div class="card bg-main table-responsive">
+                    <table class="table table-borderless e text-secondary">
                         <thead class="text-white fw-bolder">
                         <tr class="border-bottom border-primary">
                             <th>Filename</th>
-                            <th>Last change</th>
-                            <th>Last change</th>
+                            <th class="col-4">Comment</th>
+                            <th>Author</th>
                             <th>Changed by</th>
                             <th></th>
                         </tr>
@@ -180,8 +180,8 @@
                     role="tabpanel"
                     aria-labelledby="ex3-tab-2"
             >
-                <div class="card bg-main">
-                    <table class="table table-borderless table-responsive text-secondary">
+                <div class="card bg-main table-responsive">
+                    <table class="table table-borderless text-secondary">
                         <thead class="text-white fw-bolder ">
                         <tr class="">
                             <th></th>
@@ -202,7 +202,7 @@
                                 </li>
                             </td>
                             <td>#ABC123</td>
-                            <td>Fixed main function. Local changes discarded</td>
+                            <td>Fixed main function</td>
                             <td>Simone Finiletti</td>
                             <td>20.12.2022 10:35</td>
                         </tr>
@@ -312,7 +312,7 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-7">
+                            <div class="col-xl-7 col-lg-7 col-md-12 col-12 mx-auto">
                                 <h4 class="text-white"><b class="text-white">Description</b></h4>
                                 <p class="text-secondary">
                                     Lorem ipsum dolor sit amet,
@@ -323,7 +323,7 @@
                                 <h4 class="text-white mt-4"><b class="text-white">Developer</b></h4>
                                 <p class="text-secondary">Bryan Beffa, Simone Finiletti</p>
                             </div>
-                            <div class="col-5">
+                            <div class="col-xl-5 col-lg-5 col-md-12 col-12 mx-auto">
                                 <div class="col-8 mx-auto">
                                     <canvas id="chart4" style="margin:"></canvas>
                                 </div>

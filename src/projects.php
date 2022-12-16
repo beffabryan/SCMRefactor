@@ -15,9 +15,9 @@
 
 <!-- Main content -->
 <main class="col-11 mx-auto">
-    <div class="row my-4">
+    <div class="row">
         <!-- Single card-->
-        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill my-4">
             <div class="card-body bg-main p-4 rounded text-secondary">
                 <div class="row">
                     <div class="col-6 my-3">
@@ -68,7 +68,7 @@
 
         </div>
 
-        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill my-4">
             <div class="card-body bg-main p-4 rounded text-secondary">
                 <div class="row">
                     <div class="col-6 my-3">
@@ -119,7 +119,7 @@
 
         </div>
 
-        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill my-4">
             <div class="card-body bg-main p-4 rounded text-secondary">
                 <div class="row">
                     <div class="col-6 my-3">
@@ -171,9 +171,9 @@
 
     </div>
 
-    <div class="row my-4">
+    <div class="row">
         <!-- Single card-->
-        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill my-4">
             <div class="card-body bg-main p-4 rounded text-secondary">
                 <div class="row">
                     <div class="col-6 my-3">
@@ -224,10 +224,10 @@
         </div>
 
         <!-- Single card-->
-        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill"></div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill my-4"></div>
 
         <!-- Single card-->
-        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill"></div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-12 rounded-pill my-4"></div>
 
     </div>
 </main>

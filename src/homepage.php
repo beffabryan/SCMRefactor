@@ -36,9 +36,9 @@
         </div>
     </div>
 
-    <div class="col-10 mx-auto card pt-2 bg-main">
+    <div class="col-xl-10 col-lg-10 col-md-11 col-12  mx-auto card pt-2 bg-main table-responsive">
 
-        <table class="table table-borderless table-responsive" id="projectTable">
+        <table class="table table-borderless" id="projectTable">
             <thead class="text-white">
             <tr class="border-bottom border-primary">
                 <th>Repository</th>

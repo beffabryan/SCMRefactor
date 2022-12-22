@@ -22,10 +22,10 @@
 <!-- Project -->
 <div class="container mb-5">
 
-    <!-- serch input -->
-    <div class="col-lg-6 col-xl-6 col-md-8 col-12 mx-auto my-5">
+    <!-- search input -->
+    <div class="col-lg-6 col-xl-6 col-md-8 col-12 mx-auto mt-5">
         <div class="input-group">
-            <input id="search" type="search" class="form-control rounded-pill" style="background-color:rgba(0,0,0,0) "
+            <input id="search" type="search" class="form-control border-primary rounded-pill" style="background-color:rgba(0,0,0,0) "
                    placeholder="Project name" aria-label="Search"
                    aria-describedby="search-addon"/>
             <span class="input-group-text border-0" id="search-addon">
@@ -35,6 +35,23 @@
             </span>
         </div>
     </div>
+
+    <!-- Tag -->
+    <style>
+        .tag:hover {
+            background-color: #3b70c9 !important;
+            transition-duration: 300ms;
+            color: white !important;
+        }
+    </style>
+    <div class="container text-center d-block my-4">
+            <p class="d-inline text-secondary">Top tags:</p>
+            <button class="h6 bg-main py-1 px-3 text-secondary border border-primary rounded d-inline mx-1 tag">Java</button>
+            <button class="h6 bg-main py-1 px-3 text-secondary border border-primary rounded d-inline mx-1 tag">Php</button>
+            <button class="h6 bg-main py-1 px-3 text-secondary border border-primary rounded d-inline mx-1 tag">Web App</button>
+            <button class="h6 bg-main py-1 px-3 text-secondary border border-primary rounded d-inline mx-1 tag">Machine learning</button>
+    </div>
+    <!-- Tag -->
 
     <div class="col-xl-10 col-lg-10 col-md-11 col-12  mx-auto card pt-2 bg-main table-responsive">
 

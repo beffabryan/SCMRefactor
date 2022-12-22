@@ -14,6 +14,19 @@
 </div>
 
 <!-- Main content -->
+<!-- search input -->
+<div class="col-lg-6 col-xl-6 col-md-8 col-12 mx-auto mt-4 my-3">
+    <div class="input-group">
+        <input id="search" type="search" class="form-control border-primary rounded-pill" style="background-color:rgba(0,0,0,0) "
+               placeholder="Project name" aria-label="Search"
+               aria-describedby="search-addon"/>
+        <span class="input-group-text border-0" id="search-addon">
+                <a href="">
+                    <i class="fas fa-search"></i>
+                </a>
+            </span>
+    </div>
+</div>
 <main class="col-11 mx-auto">
     <div class="row">
         <!-- Single card-->
